@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B98EA2A212BDA9500296014 /* ManagedObjectHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA21212BDA9500296014 /* ManagedObjectHelper.framework */; };
 		9B98EA46212BDAAA00296014 /* ManagedObjectHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA3D212BDAA900296014 /* ManagedObjectHelper.framework */; };
+		9B98EA55212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */; };
+		9B98EA56212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 		9B98EA29212BDA9500296014 /* ManagedObjectHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagedObjectHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B98EA3D212BDAA900296014 /* ManagedObjectHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagedObjectHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B98EA45212BDAA900296014 /* ManagedObjectHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagedObjectHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9B98EA05212BDA7200296014 /* ManagedObjectHelper.h */,
+				9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */,
 				9B98EA06212BDA7200296014 /* Info.plist */,
 			);
 			path = Sources;
@@ -215,12 +219,14 @@
 				TargetAttributes = {
 					9B98EA20212BDA9500296014 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9B98EA28212BDA9500296014 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					9B98EA3C212BDAA900296014 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9B98EA44212BDAA900296014 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -283,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B98EA55212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B98EA56212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +454,7 @@
 		9B98EA33212BDA9600296014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -463,6 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-iOS";
 				PRODUCT_NAME = ManagedObjectHelper;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,6 +481,7 @@
 		9B98EA34212BDA9600296014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -496,6 +507,7 @@
 		9B98EA36212BDA9600296014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7WL9W42JR;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -514,6 +526,7 @@
 		9B98EA37212BDA9600296014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7WL9W42JR;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -532,6 +545,8 @@
 		9B98EA4F212BDAAA00296014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -553,6 +568,7 @@
 				PRODUCT_NAME = ManagedObjectHelper;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -560,6 +576,8 @@
 		9B98EA50212BDAAA00296014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -581,6 +599,7 @@
 				PRODUCT_NAME = ManagedObjectHelper;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -588,6 +607,7 @@
 		9B98EA52212BDAAA00296014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -609,6 +629,7 @@
 		9B98EA53212BDAAA00296014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
