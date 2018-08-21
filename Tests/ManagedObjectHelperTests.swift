@@ -7,30 +7,58 @@
 //
 
 import XCTest
+import CoreData
 @testable import ManagedObjectHelper
 
 class ManagedObjectHelperTests: XCTestCase {
+    let bundle = Bundle(for: ManagedObjectHelperTests.self)
+    let testModel = "TestModel"
+    
+    lazy var container: NSPersistentContainer = {
+        // Since .xctest bundle can't be accessd by `Bundle.main`, we have to declare mom explicitly
+        // You don't have to do this in your iOS App
+        let momUrl = bundle.url(forResource: testModel, withExtension: "momd")!
+        let mom = NSManagedObjectModel(contentsOf: momUrl)!
+        let container = NSPersistentContainer(name: testModel, managedObjectModel: mom)
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error { XCTFail("Failed to load store: \(error)") }
+        }
+        return container
+    }()
     
     override func setUp() {
+        func setUpTestEntity() {
+            TestEntity.deleteAll()
+            TestEntity.create().id = 1
+            TestEntity.create().id = 1
+            TestEntity.create().id = 2
+            try! NSManagedObjectContext.sharedDefault.save()
+        }
+        
+        func setUpTestEntityWithKey() {
+            TestEntityWithKey.deleteAll()
+            _ = TestEntityWithKey.findOrCreate(1)
+            _ = TestEntityWithKey.findOrCreate(1)
+            _ = TestEntityWithKey.findOrCreate(2)
+            try! NSManagedObjectContext.sharedDefault.save()
+        }
+        
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        NSManagedObjectContext.sharedDefault = container.viewContext
+        setUpTestEntity()
+        setUpTestEntityWithKey()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testHelper() {
+        XCTAssertEqual(TestEntity.count, 3)
+        XCTAssertEqual(TestEntity.search(format: "id = %d", 1).count, 2)
+        XCTAssertEqual(TestEntity.search(format: "id = %d", 2).count, 1)
+        //XCTAssertEqual(TestEntityWithKey.count, 2)
+        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 1).count, 1)
+        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 2).count, 1)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B9429952132684E0033B39A /* TestEntityWithKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9429942132684E0033B39A /* TestEntityWithKey.swift */; };
+		9B9429962132684E0033B39A /* TestEntityWithKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9429942132684E0033B39A /* TestEntityWithKey.swift */; };
 		9B98EA2A212BDA9500296014 /* ManagedObjectHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA21212BDA9500296014 /* ManagedObjectHelper.framework */; };
 		9B98EA46212BDAAA00296014 /* ManagedObjectHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA3D212BDAA900296014 /* ManagedObjectHelper.framework */; };
 		9B98EA55212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */; };
 		9B98EA56212BDC7F00296014 /* NSManagedObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */; };
+		9B98EA5B212BDDF000296014 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA57212BDDD600296014 /* TestModel.xcdatamodeld */; };
+		9B98EA5C212BDDF100296014 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA57212BDDD600296014 /* TestModel.xcdatamodeld */; };
+		9B98EA5D212BDEC900296014 /* ManagedObjectHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */; };
+		9B98EA5E212BDECA00296014 /* ManagedObjectHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */; };
+		9B98EA60212BDFFB00296014 /* TestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA5F212BDFFB00296014 /* TestEntity.swift */; };
+		9B98EA61212BDFFB00296014 /* TestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA5F212BDFFB00296014 /* TestEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B9429942132684E0033B39A /* TestEntityWithKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEntityWithKey.swift; sourceTree = "<group>"; };
 		9B98EA05212BDA7200296014 /* ManagedObjectHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagedObjectHelper.h; sourceTree = "<group>"; };
 		9B98EA06212BDA7200296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectHelperTests.swift; sourceTree = "<group>"; };
@@ -40,6 +49,8 @@
 		9B98EA3D212BDAA900296014 /* ManagedObjectHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagedObjectHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B98EA45212BDAA900296014 /* ManagedObjectHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagedObjectHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B98EA54212BDC7E00296014 /* NSManagedObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectHelper.swift; sourceTree = "<group>"; };
+		9B98EA58212BDDD600296014 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		9B98EA5F212BDFFB00296014 /* TestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */,
+				9B98EA5F212BDFFB00296014 /* TestEntity.swift */,
+				9B9429942132684E0033B39A /* TestEntityWithKey.swift */,
 				9B98EA12212BDA7200296014 /* Info.plist */,
+				9B98EA57212BDDD600296014 /* TestModel.xcdatamodeld */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -297,6 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9429952132684E0033B39A /* TestEntityWithKey.swift in Sources */,
+				9B98EA5D212BDEC900296014 /* ManagedObjectHelperTests.swift in Sources */,
+				9B98EA5B212BDDF000296014 /* TestModel.xcdatamodeld in Sources */,
+				9B98EA60212BDFFB00296014 /* TestEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9429962132684E0033B39A /* TestEntityWithKey.swift in Sources */,
+				9B98EA5E212BDECA00296014 /* ManagedObjectHelperTests.swift in Sources */,
+				9B98EA5C212BDDF100296014 /* TestModel.xcdatamodeld in Sources */,
+				9B98EA61212BDFFB00296014 /* TestEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +719,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B98EA57212BDDD600296014 /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B98EA58212BDDD600296014 /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 9B98EA58212BDDD600296014 /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9B98E9F9212BDA7100296014 /* Project object */;
 }
