@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ryosuke Iwanaga. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for ManagedObjectHelper.
 FOUNDATION_EXPORT double ManagedObjectHelperVersionNumber;
