@@ -10,6 +10,12 @@
 		9B98EA0C212BDA7200296014 /* ManagedObjectHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA02212BDA7200296014 /* ManagedObjectHelper.framework */; };
 		9B98EA11212BDA7200296014 /* ManagedObjectHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */; };
 		9B98EA13212BDA7200296014 /* ManagedObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B98EA05212BDA7200296014 /* ManagedObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B98EA2A212BDA9500296014 /* ManagedObjectHelper_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA21212BDA9500296014 /* ManagedObjectHelper_iOS.framework */; };
+		9B98EA2F212BDA9500296014 /* ManagedObjectHelper_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA2E212BDA9500296014 /* ManagedObjectHelper_iOSTests.swift */; };
+		9B98EA31212BDA9600296014 /* ManagedObjectHelper_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B98EA23212BDA9500296014 /* ManagedObjectHelper_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B98EA46212BDAAA00296014 /* ManagedObjectHelper_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B98EA3D212BDAA900296014 /* ManagedObjectHelper_Mac.framework */; };
+		9B98EA4B212BDAAA00296014 /* ManagedObjectHelper_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B98EA4A212BDAAA00296014 /* ManagedObjectHelper_MacTests.swift */; };
+		9B98EA4D212BDAAA00296014 /* ManagedObjectHelper_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B98EA3F212BDAA900296014 /* ManagedObjectHelper_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +26,20 @@
 			remoteGlobalIDString = 9B98EA01212BDA7200296014;
 			remoteInfo = ManagedObjectHelper;
 		};
+		9B98EA2B212BDA9500296014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B98E9F9212BDA7100296014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B98EA20212BDA9500296014;
+			remoteInfo = "ManagedObjectHelper iOS";
+		};
+		9B98EA47212BDAAA00296014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B98E9F9212BDA7100296014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B98EA3C212BDAA900296014;
+			remoteInfo = "ManagedObjectHelper Mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +49,18 @@
 		9B98EA0B212BDA7200296014 /* ManagedObjectHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagedObjectHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B98EA10212BDA7200296014 /* ManagedObjectHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectHelperTests.swift; sourceTree = "<group>"; };
 		9B98EA12212BDA7200296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B98EA21212BDA9500296014 /* ManagedObjectHelper_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagedObjectHelper_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98EA23212BDA9500296014 /* ManagedObjectHelper_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagedObjectHelper_iOS.h; sourceTree = "<group>"; };
+		9B98EA24212BDA9500296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B98EA29212BDA9500296014 /* ManagedObjectHelper iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ManagedObjectHelper iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98EA2E212BDA9500296014 /* ManagedObjectHelper_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectHelper_iOSTests.swift; sourceTree = "<group>"; };
+		9B98EA30212BDA9600296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B98EA3D212BDAA900296014 /* ManagedObjectHelper_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagedObjectHelper_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98EA3F212BDAA900296014 /* ManagedObjectHelper_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagedObjectHelper_Mac.h; sourceTree = "<group>"; };
+		9B98EA40212BDAA900296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B98EA45212BDAA900296014 /* ManagedObjectHelper MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ManagedObjectHelper MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98EA4A212BDAAA00296014 /* ManagedObjectHelper_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectHelper_MacTests.swift; sourceTree = "<group>"; };
+		9B98EA4C212BDAAA00296014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +79,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B98EA1D212BDA9500296014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA26212BDA9500296014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA2A212BDA9500296014 /* ManagedObjectHelper_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA39212BDAA900296014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA42212BDAA900296014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA46212BDAAA00296014 /* ManagedObjectHelper_Mac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +117,10 @@
 			children = (
 				9B98EA04212BDA7200296014 /* ManagedObjectHelper */,
 				9B98EA0F212BDA7200296014 /* ManagedObjectHelperTests */,
+				9B98EA22212BDA9500296014 /* ManagedObjectHelper iOS */,
+				9B98EA2D212BDA9500296014 /* ManagedObjectHelper iOSTests */,
+				9B98EA3E212BDAA900296014 /* ManagedObjectHelper Mac */,
+				9B98EA49212BDAAA00296014 /* ManagedObjectHelper MacTests */,
 				9B98EA03212BDA7200296014 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +130,10 @@
 			children = (
 				9B98EA02212BDA7200296014 /* ManagedObjectHelper.framework */,
 				9B98EA0B212BDA7200296014 /* ManagedObjectHelperTests.xctest */,
+				9B98EA21212BDA9500296014 /* ManagedObjectHelper_iOS.framework */,
+				9B98EA29212BDA9500296014 /* ManagedObjectHelper iOSTests.xctest */,
+				9B98EA3D212BDAA900296014 /* ManagedObjectHelper_Mac.framework */,
+				9B98EA45212BDAA900296014 /* ManagedObjectHelper MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +156,42 @@
 			path = ManagedObjectHelperTests;
 			sourceTree = "<group>";
 		};
+		9B98EA22212BDA9500296014 /* ManagedObjectHelper iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B98EA23212BDA9500296014 /* ManagedObjectHelper_iOS.h */,
+				9B98EA24212BDA9500296014 /* Info.plist */,
+			);
+			path = "ManagedObjectHelper iOS";
+			sourceTree = "<group>";
+		};
+		9B98EA2D212BDA9500296014 /* ManagedObjectHelper iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B98EA2E212BDA9500296014 /* ManagedObjectHelper_iOSTests.swift */,
+				9B98EA30212BDA9600296014 /* Info.plist */,
+			);
+			path = "ManagedObjectHelper iOSTests";
+			sourceTree = "<group>";
+		};
+		9B98EA3E212BDAA900296014 /* ManagedObjectHelper Mac */ = {
+			isa = PBXGroup;
+			children = (
+				9B98EA3F212BDAA900296014 /* ManagedObjectHelper_Mac.h */,
+				9B98EA40212BDAA900296014 /* Info.plist */,
+			);
+			path = "ManagedObjectHelper Mac";
+			sourceTree = "<group>";
+		};
+		9B98EA49212BDAAA00296014 /* ManagedObjectHelper MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B98EA4A212BDAAA00296014 /* ManagedObjectHelper_MacTests.swift */,
+				9B98EA4C212BDAAA00296014 /* Info.plist */,
+			);
+			path = "ManagedObjectHelper MacTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +200,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B98EA13212BDA7200296014 /* ManagedObjectHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA1E212BDA9500296014 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA31212BDA9600296014 /* ManagedObjectHelper_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA3A212BDAA900296014 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA4D212BDAAA00296014 /* ManagedObjectHelper_Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +258,78 @@
 			productReference = 9B98EA0B212BDA7200296014 /* ManagedObjectHelperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9B98EA20212BDA9500296014 /* ManagedObjectHelper iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B98EA32212BDA9600296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper iOS" */;
+			buildPhases = (
+				9B98EA1C212BDA9500296014 /* Sources */,
+				9B98EA1D212BDA9500296014 /* Frameworks */,
+				9B98EA1E212BDA9500296014 /* Headers */,
+				9B98EA1F212BDA9500296014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ManagedObjectHelper iOS";
+			productName = "ManagedObjectHelper iOS";
+			productReference = 9B98EA21212BDA9500296014 /* ManagedObjectHelper_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9B98EA28212BDA9500296014 /* ManagedObjectHelper iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B98EA35212BDA9600296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper iOSTests" */;
+			buildPhases = (
+				9B98EA25212BDA9500296014 /* Sources */,
+				9B98EA26212BDA9500296014 /* Frameworks */,
+				9B98EA27212BDA9500296014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B98EA2C212BDA9500296014 /* PBXTargetDependency */,
+			);
+			name = "ManagedObjectHelper iOSTests";
+			productName = "ManagedObjectHelper iOSTests";
+			productReference = 9B98EA29212BDA9500296014 /* ManagedObjectHelper iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B98EA3C212BDAA900296014 /* ManagedObjectHelper Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B98EA4E212BDAAA00296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper Mac" */;
+			buildPhases = (
+				9B98EA38212BDAA900296014 /* Sources */,
+				9B98EA39212BDAA900296014 /* Frameworks */,
+				9B98EA3A212BDAA900296014 /* Headers */,
+				9B98EA3B212BDAA900296014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ManagedObjectHelper Mac";
+			productName = "ManagedObjectHelper Mac";
+			productReference = 9B98EA3D212BDAA900296014 /* ManagedObjectHelper_Mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9B98EA44212BDAA900296014 /* ManagedObjectHelper MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B98EA51212BDAAA00296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper MacTests" */;
+			buildPhases = (
+				9B98EA41212BDAA900296014 /* Sources */,
+				9B98EA42212BDAA900296014 /* Frameworks */,
+				9B98EA43212BDAA900296014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B98EA48212BDAAA00296014 /* PBXTargetDependency */,
+			);
+			name = "ManagedObjectHelper MacTests";
+			productName = "ManagedObjectHelper MacTests";
+			productReference = 9B98EA45212BDAA900296014 /* ManagedObjectHelper MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +344,18 @@
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					9B98EA0A212BDA7200296014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9B98EA20212BDA9500296014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9B98EA28212BDA9500296014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9B98EA3C212BDAA900296014 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9B98EA44212BDAA900296014 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -168,6 +374,10 @@
 			targets = (
 				9B98EA01212BDA7200296014 /* ManagedObjectHelper */,
 				9B98EA0A212BDA7200296014 /* ManagedObjectHelperTests */,
+				9B98EA20212BDA9500296014 /* ManagedObjectHelper iOS */,
+				9B98EA28212BDA9500296014 /* ManagedObjectHelper iOSTests */,
+				9B98EA3C212BDAA900296014 /* ManagedObjectHelper Mac */,
+				9B98EA44212BDAA900296014 /* ManagedObjectHelper MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +391,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9B98EA09212BDA7200296014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA1F212BDA9500296014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA27212BDA9500296014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA3B212BDAA900296014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA43212BDAA900296014 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,6 +443,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B98EA1C212BDA9500296014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA25212BDA9500296014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA2F212BDA9500296014 /* ManagedObjectHelper_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA38212BDAA900296014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B98EA41212BDAA900296014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B98EA4B212BDAAA00296014 /* ManagedObjectHelper_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -212,6 +480,16 @@
 			isa = PBXTargetDependency;
 			target = 9B98EA01212BDA7200296014 /* ManagedObjectHelper */;
 			targetProxy = 9B98EA0D212BDA7200296014 /* PBXContainerItemProxy */;
+		};
+		9B98EA2C212BDA9500296014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B98EA20212BDA9500296014 /* ManagedObjectHelper iOS */;
+			targetProxy = 9B98EA2B212BDA9500296014 /* PBXContainerItemProxy */;
+		};
+		9B98EA48212BDAAA00296014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B98EA3C212BDAA900296014 /* ManagedObjectHelper Mac */;
+			targetProxy = 9B98EA47212BDAAA00296014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +700,190 @@
 			};
 			name = Release;
 		};
+		9B98EA33212BDA9600296014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ManagedObjectHelper iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B98EA34212BDA9600296014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ManagedObjectHelper iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B98EA36212BDA9600296014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				INFOPLIST_FILE = "ManagedObjectHelper iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B98EA37212BDA9600296014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				INFOPLIST_FILE = "ManagedObjectHelper iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B98EA4F212BDAAA00296014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "ManagedObjectHelper Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9B98EA50212BDAAA00296014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "ManagedObjectHelper Mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		9B98EA52212BDAAA00296014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				INFOPLIST_FILE = "ManagedObjectHelper MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		9B98EA53212BDAAA00296014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7WL9W42JR;
+				INFOPLIST_FILE = "ManagedObjectHelper MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.riywo.ManagedObjectHelper-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +910,42 @@
 			buildConfigurations = (
 				9B98EA1A212BDA7200296014 /* Debug */,
 				9B98EA1B212BDA7200296014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B98EA32212BDA9600296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B98EA33212BDA9600296014 /* Debug */,
+				9B98EA34212BDA9600296014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B98EA35212BDA9600296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B98EA36212BDA9600296014 /* Debug */,
+				9B98EA37212BDA9600296014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B98EA4E212BDAAA00296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B98EA4F212BDAAA00296014 /* Debug */,
+				9B98EA50212BDAAA00296014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B98EA51212BDAAA00296014 /* Build configuration list for PBXNativeTarget "ManagedObjectHelper MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B98EA52212BDAAA00296014 /* Debug */,
+				9B98EA53212BDAAA00296014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
