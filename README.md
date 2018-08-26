@@ -14,7 +14,7 @@ extension Entity: NSManagedObject: NSManagedObjectHelper {
 }
 
 Entity.all      // => Fetch all objects
-Entity.count    // => Return total count
+Entity.countAll // => Return total count
 Entity.create() // => Return a new object to store
 
 Entity.search(

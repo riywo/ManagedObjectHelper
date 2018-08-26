@@ -37,6 +37,10 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
         return request
     }
     
+    public static func create() -> Self {
+        return Self(context: NSManagedObjectContext.sharedDefault)
+    }
+    
     public static func fetch(_ request: NSFetchRequest<Self>) -> [Self]? {
         return try? NSManagedObjectContext.sharedDefault.fetch(request)
     }
@@ -45,12 +49,13 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
         return fetch(request()) ?? []
     }
     
-    public static var count: Int {
+    public static var countAll: Int {
         return (try? NSManagedObjectContext.sharedDefault.count(for: fetchRequest())) ?? 0
     }
     
-    public static func create() -> Self {
-        return Self(context: NSManagedObjectContext.sharedDefault)
+    public static func count(format: String, _ args: CVarArg...) -> Int {
+        let countRequest = request(NSPredicate(format: format, argumentArray: args))
+        return (try? NSManagedObjectContext.sharedDefault.count(for: countRequest)) ?? 0
     }
     
     public static func search(_ predicate: NSPredicate, _ sortDescriptors: [NSSortDescriptor]? = nil,
@@ -76,8 +81,8 @@ extension NSManagedObjectHelperWithKey where Self: NSManagedObject {
     }
     
     public static func findOrCreate(_ id: KeyType) -> Self {
-        if let existed = find(id) {
-            return existed
+        if let existing = find(id) {
+            return existing
         } else {
             let new = create()
             new.setValue(id, forKeyPath: keyName)
