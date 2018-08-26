@@ -62,7 +62,7 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
         sort: [(key: String, asc: Bool)]? = nil, limit: Int? = nil) -> [Self] {
         let predicate = NSPredicate(format: format, argumentArray: args)
         let sortDescriptors = sort?.map{ NSSortDescriptor(key: $0.key, ascending: $0.asc) }
-        return search(predicate, sortDescriptors)
+        return search(predicate, sortDescriptors, limit)
     }
     
     public static func deleteAll() {

@@ -57,7 +57,7 @@ class ManagedObjectHelperTests: XCTestCase {
         XCTAssertEqual(TestEntity.count, 3)
         XCTAssertEqual(TestEntity.search(format: "id = %d", 1).count, 2)
         XCTAssertEqual(TestEntity.search(format: "id = %d", 2).count, 1)
-        //XCTAssertEqual(TestEntityWithKey.count, 2)
+        XCTAssertEqual(TestEntityWithKey.count, 2)
         XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 1).count, 1)
         XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 2).count, 1)
     }
