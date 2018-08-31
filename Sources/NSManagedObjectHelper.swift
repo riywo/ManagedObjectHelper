@@ -25,49 +25,47 @@ extension NSManagedObjectContext {
 }
 
 extension NSManagedObjectHelper where Self: NSManagedObject {
-    public static func request(
-        _ predicate: NSPredicate? = nil,
-        _ sortDescriptors: [NSSortDescriptor]? = nil,
-        _ fetchLimit: Int? = nil) -> NSFetchRequest<Self>
-    {
-        let request: NSFetchRequest<Self> = Self.fetchRequest() as! NSFetchRequest<Self>
-        if predicate != nil { request.predicate = predicate }
-        if sortDescriptors != nil { request.sortDescriptors = sortDescriptors }
-        if fetchLimit != nil { request.fetchLimit = fetchLimit! }
-        return request
-    }
-    
     public static func create() -> Self {
         return Self(context: NSManagedObjectContext.sharedDefault)
     }
     
-    public static func fetch(_ request: NSFetchRequest<Self>) -> [Self]? {
-        return try? NSManagedObjectContext.sharedDefault.fetch(request)
+    public static func request(
+        _ predicate: NSPredicate? = nil,
+        _ sortDescriptors: [NSSortDescriptor] = [],
+        _ fetchLimit: Int? = nil) -> NSFetchRequest<Self>
+    {
+        let request: NSFetchRequest<Self> = Self.fetchRequest() as! NSFetchRequest<Self>
+        request.predicate = predicate
+        request.sortDescriptors = sortDescriptors
+        if let limit = fetchLimit { request.fetchLimit = limit }
+        return request
     }
     
-    public static var all: [Self] {
-        return fetch(request()) ?? []
+    public static func fetch(_ request: NSFetchRequest<Self>) -> [Self] {
+        return (try? NSManagedObjectContext.sharedDefault.fetch(request)) ?? []
     }
     
-    public static var countAll: Int {
-        return (try? NSManagedObjectContext.sharedDefault.count(for: fetchRequest())) ?? 0
+    public static func searchRequest(format: String? = nil, args: [CVarArg] = [],
+        sort: [(key: String, asc: Bool)] = [], limit: Int? = nil) -> NSFetchRequest<Self>
+    {
+        let predicate = format == nil ? nil : NSPredicate(format: format!, argumentArray: args)
+        let sortDescriptors = sort.map{ NSSortDescriptor(key: $0.key, ascending: $0.asc) }
+        return request(predicate, sortDescriptors, limit)
     }
     
-    public static func count(format: String, _ args: CVarArg...) -> Int {
-        let countRequest = request(NSPredicate(format: format, argumentArray: args))
+    public static func search(format: String? = nil, args: [CVarArg] = [],
+        sort: [(key: String, asc: Bool)] = [], limit: Int? = nil) -> [Self]
+    {
+        return fetch(searchRequest(format: format, args: args, sort: sort, limit: limit))
+    }
+    
+    public static func all() -> [Self] {
+        return search()
+    }
+    
+    public static func count(format: String? = nil, args: [CVarArg] = []) -> Int {
+        let countRequest = searchRequest(format: format, args: args)
         return (try? NSManagedObjectContext.sharedDefault.count(for: countRequest)) ?? 0
-    }
-    
-    public static func search(_ predicate: NSPredicate, _ sortDescriptors: [NSSortDescriptor]? = nil,
-                              _ limit: Int? = nil) -> [Self] {
-        return fetch(request(predicate, sortDescriptors, limit)) ?? []
-    }
-    
-    public static func search(format: String, _ args: CVarArg...,
-        sort: [(key: String, asc: Bool)]? = nil, limit: Int? = nil) -> [Self] {
-        let predicate = NSPredicate(format: format, argumentArray: args)
-        let sortDescriptors = sort?.map{ NSSortDescriptor(key: $0.key, ascending: $0.asc) }
-        return search(predicate, sortDescriptors, limit)
     }
     
     public static func deleteAll() {
@@ -77,7 +75,7 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
 
 extension NSManagedObjectHelperWithKey where Self: NSManagedObject {
     public static func find(_ id: KeyType) -> Self? {
-        return search(format: "%K == %@", keyName, id, limit: 1).first
+        return search(format: "%K == %@", args: [keyName, id], limit: 1).first
     }
     
     public static func findOrCreate(_ id: KeyType) -> Self {

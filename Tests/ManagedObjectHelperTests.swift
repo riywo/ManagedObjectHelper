@@ -54,15 +54,15 @@ class ManagedObjectHelperTests: XCTestCase {
     }
     
     func testHelper() {
-        XCTAssertEqual(TestEntity.countAll, 3)
-        XCTAssertEqual(TestEntity.search(format: "id = %d", 1).count, 2)
-        XCTAssertEqual(TestEntity.search(format: "id = %d", 2).count, 1)
-        XCTAssertEqual(TestEntity.count(format: "id = %d", 1), 2)
-        XCTAssertEqual(TestEntity.count(format: "id = %d", 2), 1)
-        XCTAssertEqual(TestEntityWithKey.countAll, 2)
-        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 1).count, 1)
-        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", 2).count, 1)
-        XCTAssertEqual(TestEntityWithKey.count(format: "id = %d", 1), 1)
-        XCTAssertEqual(TestEntityWithKey.count(format: "id = %d", 2), 1)
+        XCTAssertEqual(TestEntity.count(), 3)
+        XCTAssertEqual(TestEntity.search(format: "id = %d", args: [1]).count, 2)
+        XCTAssertEqual(TestEntity.search(format: "id = %d", args: [2]).count, 1)
+        XCTAssertEqual(TestEntity.count(format: "id = %d", args: [1]), 2)
+        XCTAssertEqual(TestEntity.count(format: "id = %d", args: [2]), 1)
+        XCTAssertEqual(TestEntityWithKey.count(), 2)
+        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", args: [1]).count, 1)
+        XCTAssertEqual(TestEntityWithKey.search(format: "id = %d", args: [2]).count, 1)
+        XCTAssertEqual(TestEntityWithKey.count(format: "id = %d", args: [1]), 1)
+        XCTAssertEqual(TestEntityWithKey.count(format: "id = %d", args: [2]), 1)
     }
 }
