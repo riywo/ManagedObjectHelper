@@ -31,12 +31,12 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
     
     public static func request(
         _ predicate: NSPredicate? = nil,
-        _ sortDescriptors: [NSSortDescriptor] = [],
+        _ sortDescriptors: [NSSortDescriptor]? = nil,
         _ fetchLimit: Int? = nil) -> NSFetchRequest<Self>
     {
         let request: NSFetchRequest<Self> = Self.fetchRequest() as! NSFetchRequest<Self>
         request.predicate = predicate
-        request.sortDescriptors = sortDescriptors
+        request.sortDescriptors = sortDescriptors ?? []
         if let limit = fetchLimit { request.fetchLimit = limit }
         return request
     }
@@ -45,16 +45,16 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
         return (try? NSManagedObjectContext.sharedDefault.fetch(request)) ?? []
     }
     
-    public static func searchRequest(format: String? = nil, args: [CVarArg] = [],
-        sort: [(key: String, asc: Bool)] = [], limit: Int? = nil) -> NSFetchRequest<Self>
+    public static func searchRequest(format: String? = nil, args: [CVarArg]? = nil,
+        sort: [(key: String, asc: Bool)]? = nil, limit: Int? = nil) -> NSFetchRequest<Self>
     {
-        let predicate = format == nil ? nil : NSPredicate(format: format!, argumentArray: args)
-        let sortDescriptors = sort.map{ NSSortDescriptor(key: $0.key, ascending: $0.asc) }
+        let predicate = format == nil ? nil : NSPredicate(format: format!, argumentArray: args ?? [])
+        let sortDescriptors = sort?.map{ NSSortDescriptor(key: $0.key, ascending: $0.asc) }
         return request(predicate, sortDescriptors, limit)
     }
     
-    public static func search(format: String? = nil, args: [CVarArg] = [],
-        sort: [(key: String, asc: Bool)] = [], limit: Int? = nil) -> [Self]
+    public static func search(format: String? = nil, args: [CVarArg]? = nil,
+        sort: [(key: String, asc: Bool)]? = nil, limit: Int? = nil) -> [Self]
     {
         return fetch(searchRequest(format: format, args: args, sort: sort, limit: limit))
     }
@@ -63,7 +63,7 @@ extension NSManagedObjectHelper where Self: NSManagedObject {
         return search()
     }
     
-    public static func count(format: String? = nil, args: [CVarArg] = []) -> Int {
+    public static func count(format: String? = nil, args: [CVarArg]? = nil) -> Int {
         let countRequest = searchRequest(format: format, args: args)
         return (try? NSManagedObjectContext.sharedDefault.count(for: countRequest)) ?? 0
     }
